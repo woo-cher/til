@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Slf4j
-public class FooBarTests {
+public class DiTests {
     
     @Autowired
     private ConstructorInjection constructorInjection;
