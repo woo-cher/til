@@ -256,7 +256,7 @@ public class FooBarTests {
 
 **(실행 결과)**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d8ab523-cba1-4ac2-a7c7-50e68ba69059/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2d8ab523-cba1-4ac2-a7c7-50e68ba69059/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220225%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220225T064614Z&X-Amz-Expires=86400&X-Amz-Signature=1f9f991af88fcb04c0af8ac66cd97cfc7a865803607decbcc7d52b6e917ce12b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 
 
