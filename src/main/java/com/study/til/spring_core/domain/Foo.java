@@ -1,6 +1,5 @@
-package com.study.til.domain;
+package com.study.til.spring_core.domain;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

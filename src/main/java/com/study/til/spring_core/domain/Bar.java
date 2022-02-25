@@ -1,4 +1,4 @@
-package com.study.til.domain;
+package com.study.til.spring_core.domain;
 
 import org.springframework.stereotype.Component;
 

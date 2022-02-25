@@ -1,4 +1,4 @@
-package com.study.til.core.repository;
+package com.study.til.spring_core.repository;
 
 import org.springframework.stereotype.Repository;
 

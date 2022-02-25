@@ -1,4 +1,4 @@
-package com.study.til.config;
+package com.study.til.spring_core.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.boot.context.properties.ConfigurationProperties;
