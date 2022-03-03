@@ -1,7 +1,5 @@
 package com.study.til.psa;
 
-import org.springframework.stereotype.Service;
-
 public class FooIntroductionService implements Introduction {
 
     @Override

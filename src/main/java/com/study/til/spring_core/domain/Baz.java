@@ -1,5 +1,5 @@
 package com.study.til.spring_core.domain;
 
-public class Baz {
+public class Baz implements TilModel {
 
 }

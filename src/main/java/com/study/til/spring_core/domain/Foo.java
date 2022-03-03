@@ -1,6 +1,6 @@
 package com.study.til.spring_core.domain;
 
-public class Foo {
+public class Foo implements TilModel {
     private final Bar bar;
 
     public Foo(Bar bar) {
