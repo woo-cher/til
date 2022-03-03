@@ -122,7 +122,7 @@ OOP의 개념으로 어플리케이션을 개발하면 책임과 관심사에 �
 
 그럼에도 OOP 에 대해 아쉬운 부분이 존재한다. 모든 클래스가 각자의 역할과 책임을 다하도록 설계되었지만 각각의 객체 군들이 공통적으로 수행하는 기능들이 흩어져서 존재한다는 것이다.
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b2696e5b-906d-4e08-a950-09fbd9303958/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220302%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220302T081819Z&X-Amz-Expires=86400&X-Amz-Signature=d674984bcd8074770c142736dc0d3b7b85f4b4968ac23bb705932b400b2e9e40&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b2696e5b-906d-4e08-a950-09fbd9303958/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220303%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220303T094507Z&X-Amz-Expires=86400&X-Amz-Signature=614ef6b73f3913bcbd4ea5fe53f955ea9bd3fd498872573cf68edce894cf3ab5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 예를 들어, 특정 클래스 그룹에 대해서 “이 함수가 실행되기 전, 후로 로그를 남기고 싶은데..” 라는 상황이 발생할 수 있다. 나도, AOP 의 개념을 몰랐을 때 실제로 이러한 경험을 한 적이 있다.
 
