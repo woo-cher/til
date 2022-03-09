@@ -13,3 +13,4 @@
 ### :hammer: Design Pattern
 
 ### 1. [Proxy Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/01_proxy.md)
+### 1. [Singleton Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/02_singleton.md)
