@@ -15,3 +15,4 @@
 
 ### 1. [Proxy Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/01_proxy.md)
 ### 2. [Singleton Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/02_singleton.md)
+### 3. [Decorator Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/03_decorator.md)
