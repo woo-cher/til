@@ -214,7 +214,7 @@ public class SearchButton {
         this.searchStrategy = new SearchAllStrategy();
     }
 
-		public void setSearchStrategy(SearchStrategy searchStrategy) {
+    public void setSearchStrategy(SearchStrategy searchStrategy) {
         this.searchStrategy = searchStrategy;
     }
 
