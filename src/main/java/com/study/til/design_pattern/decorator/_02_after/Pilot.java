@@ -15,17 +15,17 @@ public class Pilot {
         // 레이저만 획득
         fighter = new LaserDecorator(new BasicFighter());
         fighter.attack();
-        
+
         System.out.println("");
-        
+
         // 플라즈마만 획득
         fighter = new PlasmaDecorator(new BasicFighter());
         fighter.attack();
 
         System.out.println("");
 
-        // 둘다다 획득
-       fighter = new PlasmaDecorator(new LaserDecorator(new BasicFighter()));
+        // 모두 획득
+        fighter = new PlasmaDecorator(new LaserDecorator(new MissileDecorator(new BasicFighter())));
         fighter.attack();
     }
 }
