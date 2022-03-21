@@ -2,7 +2,7 @@ package com.study.til.design_pattern.factory._02_after;
 
 import com.study.til.design_pattern.factory.*;
 
-public class MedicineFactory {
+public class MedicineFactory implements Factory {
 
     public Medicine getMedicine(Customer customer) {
         return switch (customer) {
