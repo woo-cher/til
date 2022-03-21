@@ -18,3 +18,4 @@
 ### 3. [Decorator Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/03_decorator.md)
 ### 4. [Strategy Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/04_strategy.md)
 ### 5. [Factory Method Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/05_factory.md)
+### 6. [Abstract Factory Pattern](https://github.com/woo-cher/spring-til/blob/master/til/design_pattern/06_abstract_factory.md)
