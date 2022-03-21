@@ -1,4 +1,4 @@
-package com.study.til.di;
+package com.study.til.spring.di;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

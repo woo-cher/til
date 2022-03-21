@@ -1,4 +1,4 @@
-package com.study.til.di;
+package com.study.til.spring.di;
 
 import com.study.til.spring_core.domain.TilModel;
 import lombok.extern.slf4j.Slf4j;

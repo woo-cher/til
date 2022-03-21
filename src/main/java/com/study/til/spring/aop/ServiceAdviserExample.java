@@ -1,4 +1,4 @@
-package com.study.til.aop;
+package com.study.til.spring.aop;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -24,7 +24,7 @@ public class ServiceAdviserExample {
         log.info("──────────────────── [After] log, {}", joinPoint);
     }
 
-    @Around("@annotation(LoggingAspect)")
+    @Around("@annotation(com.study.til.spring.aop.LoggingAspect)")
     public Object aroundAndAnnotationExample(ProceedingJoinPoint pjp) throws Throwable {
         log.info("──────────────────── [Around] before method proceed");
         Object retVal = pjp.proceed();
@@ -32,7 +32,7 @@ public class ServiceAdviserExample {
         return retVal;
     }
 
-    @AfterReturning(value = "execution(* com.study.til.aop.SomeService.getSomeMessage())", returning = "returnObject")
+    @AfterReturning(value = "execution(* com.study.til.spring.aop.SomeService.getSomeMessage())", returning = "returnObject")
     public void afterReturnExample(Object returnObject) {
         log.info("──────────────────── [AfterReturning] log, {}", returnObject);
     }

@@ -1,4 +1,4 @@
-package com.study.til.interceptor;
+package com.study.til.spring.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.study.til.psa;
+package com.study.til.spring.psa;
 
 public class FooIntroductionService implements Introduction {
 

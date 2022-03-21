@@ -1,4 +1,4 @@
-package com.study.til.aop;
+package com.study.til.spring.aop;
 
 import com.study.til.spring_core.domain.Bar;
 import lombok.extern.slf4j.Slf4j;

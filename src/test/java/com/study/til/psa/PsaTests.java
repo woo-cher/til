@@ -1,5 +1,8 @@
 package com.study.til.psa;
 
+import com.study.til.spring.psa.BazIntroductionService;
+import com.study.til.spring.psa.FooIntroductionService;
+import com.study.til.spring.psa.Introduction;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
