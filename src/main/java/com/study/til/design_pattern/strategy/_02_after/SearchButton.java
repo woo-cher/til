@@ -3,7 +3,7 @@ package com.study.til.design_pattern.strategy._02_after;
 public class SearchButton {
     private SearchStrategy searchStrategy;
 
-    SearchButton() {
+    public SearchButton() {
         this.searchStrategy = new SearchAllStrategy();
     }
 
