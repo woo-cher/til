@@ -1,0 +1,22 @@
+package com.study.til.design_pattern.observer._02_after;
+
+import java.util.Observable;
+
+public class Mother extends Observable {
+
+    public static void main(String[] args) {
+        MotherSubject subject = new MotherSubject();
+
+        subject.registerObserver(new Son());
+        subject.registerObserver(new Daughter());
+        subject.registerObserver(new Pomeranian());
+
+        System.out.println("# 아빠가 화가 났다");
+        subject.setAngry(true);
+        subject.notifyObservers();
+
+        System.out.println("\n# 아빠가 기분이 좋다");
+        subject.setAngry(false);
+        subject.notifyObservers();
+    }
+}
