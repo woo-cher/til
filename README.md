@@ -24,11 +24,16 @@
 
 <br>
 
+### :blue_book: JAVA
+### 1. [Exception](https://github.com/woo-cher/spring-til/blob/master/til/java/01_exception.md)
+
+<br>
+
 ### :blue_book: Development
 ### 1. [Rest API](https://github.com/woo-cher/spring-til/blob/master/til/development/01_rest_api.md)
 
 <br>
 
 ### :eyeglasses: Database
-### 1. [JOIN](https://github.com/woo-cher/spring-til/blob/master/til/database/01_join.md)
+### 1. [Join](https://github.com/woo-cher/spring-til/blob/master/til/database/01_join.md)
 
