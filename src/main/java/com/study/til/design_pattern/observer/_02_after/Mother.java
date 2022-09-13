@@ -1,8 +1,9 @@
 package com.study.til.design_pattern.observer._02_after;
 
-import java.util.Observable;
+import lombok.extern.slf4j.Slf4j;
 
-public class Mother extends Observable {
+@Slf4j
+public class Mother {
 
     public static void main(String[] args) {
         MotherSubject subject = new MotherSubject();
@@ -11,11 +12,11 @@ public class Mother extends Observable {
         subject.registerObserver(new Daughter());
         subject.registerObserver(new Pomeranian());
 
-        System.out.println("# 아빠가 화가 났다");
+        log.info("# 아빠가 화가 났다");
         subject.setAngry(true);
         subject.notifyObservers();
 
-        System.out.println("\n# 아빠가 기분이 좋다");
+        log.info("\n# 아빠가 기분이 좋다");
         subject.setAngry(false);
         subject.notifyObservers();
     }

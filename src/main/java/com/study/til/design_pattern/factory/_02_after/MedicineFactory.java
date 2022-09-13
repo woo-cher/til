@@ -5,10 +5,13 @@ import com.study.til.design_pattern.factory.*;
 public class MedicineFactory implements Factory {
 
     public Medicine getMedicine(Customer customer) {
-        return switch (customer) {
-            case COLD -> new Cold();
-            case DIGESTIVE -> new Digestive();
-            case HEADACHE -> new HeadachePill();
-        };
+        switch (customer) {
+            case COLD:
+                return new Cold();
+            case DIGESTIVE:
+                return new Digestive();
+            default:
+                return new HeadachePill();
+        }
     }
 }
