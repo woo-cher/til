@@ -2,4 +2,5 @@ rootProject.name = 'til'
 
 include 'spring-til'
 include 'exception'
+include 'design_pattern'
 

@@ -52,3 +52,4 @@ subprojects {
 
 project(':spring-til') {}
 project(':exception') {}
+project(':design_pattern') {}
