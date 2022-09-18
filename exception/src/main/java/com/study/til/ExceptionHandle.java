@@ -1,4 +1,4 @@
-package com.study.til.exception;
+package com.study.til;
 
 import java.io.FileWriter;
 import java.io.IOException;

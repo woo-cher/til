@@ -1,4 +1,4 @@
-package com.study.til.exception;
+package com.study.til;
 
 public class UnCheckedException {
     public static void main(String[] args) {
