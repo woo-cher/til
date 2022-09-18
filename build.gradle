@@ -50,6 +50,6 @@ subprojects {
     }
 }
 
-project(':spring-til') {}
+project(':spring_application') {}
 project(':exception') {}
 project(':design_pattern') {}
