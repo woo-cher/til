@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name:
+    jdbc-url:
+    username:
+    password:
+
+  kafka:
+    bootstrap-servers:
+
+server:
+  port:
+
+  rabbitmq:
+    host:
+    port:

@@ -197,3 +197,6 @@ application-local.yml
 application-test.yml
 
 .jpb/
+
+# custom
+application-local.yml
