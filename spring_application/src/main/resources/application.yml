@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    jdbc-url: jdbc:mysql://localhost:3306/toy?serverTimezone=Asia/Seoul
+    jdbc-url: jdbc:mysql://localhost:3306/til?serverTimezone=Asia/Seoul
     username: root
-    password: dnwjd152*
+    password: dnwjd1
 
   kafka:
     bootstrap-servers: localhost:9092

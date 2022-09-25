@@ -1,7 +1,7 @@
-package com.study.til.message_broker;
+package com.study.til;
 
-import com.study.til.message_broker.kafka.KafkaProducer;
-import com.study.til.message_broker.rabbitmq.RabbitmqPublisher;
+import com.study.til.kafka.KafkaProducer;
+import com.study.til.rabbitmq.RabbitmqPublisher;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +13,7 @@ import java.util.Map;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/v1")
-public class MqRequestApi {
+public class MessageRequestController {
     private final KafkaProducer producer;
     private final RabbitmqPublisher sender;
 

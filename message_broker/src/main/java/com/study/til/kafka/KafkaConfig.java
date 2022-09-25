@@ -1,4 +1,4 @@
-package com.study.til.message_broker.kafka;
+package com.study.til.kafka;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.ProducerConfig;

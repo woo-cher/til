@@ -1,4 +1,4 @@
-package com.study.til.message_broker.rabbitmq;
+package com.study.til.rabbitmq;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;

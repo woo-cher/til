@@ -1,4 +1,4 @@
-package com.study.til.message_broker.kafka;
+package com.study.til.kafka;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;

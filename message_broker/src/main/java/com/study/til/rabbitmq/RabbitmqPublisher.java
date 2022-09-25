@@ -1,4 +1,4 @@
-package com.study.til.message_broker.rabbitmq;
+package com.study.til.rabbitmq;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitMessagingTemplate;
