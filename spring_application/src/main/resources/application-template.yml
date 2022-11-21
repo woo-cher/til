@@ -1,16 +1,18 @@
+server:
+  port:
+
 spring:
   datasource:
-    driver-class-name:
+    driver-class-name: com.mysql.jdbc.Driver
     jdbc-url:
     username:
     password:
 
   kafka:
-    bootstrap-servers:
-
-server:
-  port:
+    bootstrap-servers: #localhost:9092
 
   rabbitmq:
-    host:
-    port:
+    host: #localhost
+    port: 5672
+
+
