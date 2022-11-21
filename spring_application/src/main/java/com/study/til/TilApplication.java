@@ -15,9 +15,9 @@ public class TilApplication {
 
   @Bean
   FilterRegistrationBean<SpecificUrlPatternFilter>
-      specificUrlPatternFilterFilterRegistrationBean() {
-    final FilterRegistrationBean<SpecificUrlPatternFilter> filterRegistrationBean =
-        new FilterRegistrationBean<>();
+      specificUrlPatternFilterFilterRegistrationBean()
+  {
+    final FilterRegistrationBean<SpecificUrlPatternFilter> filterRegistrationBean = new FilterRegistrationBean<>();
     filterRegistrationBean.setFilter(new SpecificUrlPatternFilter());
     filterRegistrationBean.addUrlPatterns("/specific-url-pattern/*");
     return filterRegistrationBean;

@@ -9,13 +9,10 @@ import com.study.til.factory.Medicine;
 public class BarMedicineFactory implements AbstractMedicineFactory {
 
   public Medicine getMedicine(Customer customer) {
-    switch (customer) {
-      case COLD:
-        return new BarCold();
-      case DIGESTIVE:
-        return new BarDigestive();
-      default:
-        return new BarHeadachePill();
-    }
+    return switch (customer) {
+      case COLD -> new BarCold();
+      case DIGESTIVE -> new BarDigestive();
+      default -> new BarHeadachePill();
+    };
   }
 }
