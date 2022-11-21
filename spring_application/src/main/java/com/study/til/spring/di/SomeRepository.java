@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Slf4j
 public class SomeRepository {
-    public void insert(String foo) {
-        log.info("insert Foo : {}", foo);
-    }
+  public void insert(String foo) {
+    log.info("insert Foo : {}", foo);
+  }
 
-    public void saveSome(TilModel model) {
-        log.info("save object {}", model);
-    }
+  public void saveSome(TilModel model) {
+    log.info("save object {}", model);
+  }
 }

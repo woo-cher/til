@@ -6,10 +6,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class FieldInjection {
 
-    @Autowired
-    private SomeRepository repository; // Field Injection
+  @Autowired private SomeRepository repository; // Field Injection
 
-    public void save(String foo) {
-        repository.insert(foo);
-    }
+  public void save(String foo) {
+    repository.insert(foo);
+  }
 }

@@ -2,22 +2,22 @@ package com.study.til.proxy.use_interface;
 
 public class GameServiceProxy implements GameService {
 
-    private GameService gameService;
+  private GameService gameService;
 
-    public GameServiceProxy(GameService gameService) {
-        this.gameService = gameService;
+  public GameServiceProxy(GameService gameService) {
+    this.gameService = gameService;
+  }
+
+  @Override
+  public void startGame() {
+    long startTime = System.currentTimeMillis();
+
+    // 초기화 지연 (lazy-init)
+    if (this.gameService == null) {
+      this.gameService = new DefaultGameService();
     }
 
-    @Override
-    public void startGame() {
-        long startTime = System.currentTimeMillis();
-
-        // 초기화 지연 (lazy-init)
-        if (this.gameService == null) {
-            this.gameService = new DefaultGameService();
-        }
-
-        this.gameService.startGame();
-        System.out.println(System.currentTimeMillis() - startTime);
-    }
+    this.gameService.startGame();
+    System.out.println(System.currentTimeMillis() - startTime);
+  }
 }

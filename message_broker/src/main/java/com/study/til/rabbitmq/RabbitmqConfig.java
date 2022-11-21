@@ -13,33 +13,33 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitmqConfig {
 
-    @Bean
-    public CachingConnectionFactory connectionFactory() {
-        return new CachingConnectionFactory("localhost");
-    }
+  @Bean
+  public CachingConnectionFactory connectionFactory() {
+    return new CachingConnectionFactory("localhost");
+  }
 
-    @Bean
-    public RabbitAdmin amqpAdmin() {
-        return new RabbitAdmin(connectionFactory());
-    }
+  @Bean
+  public RabbitAdmin amqpAdmin() {
+    return new RabbitAdmin(connectionFactory());
+  }
 
-    @Bean
-    public RabbitTemplate rabbitTemplate() {
-        return new RabbitTemplate(connectionFactory());
-    }
+  @Bean
+  public RabbitTemplate rabbitTemplate() {
+    return new RabbitTemplate(connectionFactory());
+  }
 
-    @Bean
-    public Queue messageQueue() {
-        return new Queue("toy.queue");
-    }
+  @Bean
+  public Queue messageQueue() {
+    return new Queue("toy.queue");
+  }
 
-    @Bean
-    public TopicExchange topicExchange() {
-        return new TopicExchange("toy.exchange");
-    }
+  @Bean
+  public TopicExchange topicExchange() {
+    return new TopicExchange("toy.exchange");
+  }
 
-    @Bean
-    Binding boundQueue(Queue toyQueue, TopicExchange topicExchange) {
-        return BindingBuilder.bind(toyQueue).to(topicExchange).with("routeKey");
-    }
+  @Bean
+  Binding boundQueue(Queue toyQueue, TopicExchange topicExchange) {
+    return BindingBuilder.bind(toyQueue).to(topicExchange).with("routeKey");
+  }
 }

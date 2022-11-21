@@ -8,17 +8,17 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class SomeService {
 
-    public void saveSomeObject() {
-        log.info("saved : {}", new Bar());
-    }
+  public void saveSomeObject() {
+    log.info("saved : {}", new Bar());
+  }
 
-    @LoggingAspect
-    public void doSomething() {
-        log.info("do something!!");
-    }
+  @LoggingAspect
+  public void doSomething() {
+    log.info("do something!!");
+  }
 
-    public String getSomeMessage() {
-        log.info("will return : some message");
-        return "some message";
-    }
+  public String getSomeMessage() {
+    log.info("will return : some message");
+    return "some message";
+  }
 }

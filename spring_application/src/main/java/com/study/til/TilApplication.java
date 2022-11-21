@@ -9,15 +9,17 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class TilApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(TilApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(TilApplication.class, args);
+  }
 
-    @Bean
-    FilterRegistrationBean<SpecificUrlPatternFilter> specificUrlPatternFilterFilterRegistrationBean() {
-        final FilterRegistrationBean<SpecificUrlPatternFilter> filterRegistrationBean = new FilterRegistrationBean<>();
-        filterRegistrationBean.setFilter(new SpecificUrlPatternFilter());
-        filterRegistrationBean.addUrlPatterns("/specific-url-pattern/*");
-        return filterRegistrationBean;
-    }
+  @Bean
+  FilterRegistrationBean<SpecificUrlPatternFilter>
+      specificUrlPatternFilterFilterRegistrationBean() {
+    final FilterRegistrationBean<SpecificUrlPatternFilter> filterRegistrationBean =
+        new FilterRegistrationBean<>();
+    filterRegistrationBean.setFilter(new SpecificUrlPatternFilter());
+    filterRegistrationBean.addUrlPatterns("/specific-url-pattern/*");
+    return filterRegistrationBean;
+  }
 }

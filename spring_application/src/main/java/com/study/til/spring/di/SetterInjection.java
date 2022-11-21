@@ -6,14 +6,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class SetterInjection {
 
-    private SomeRepository someRepository;
+  private SomeRepository someRepository;
 
-    @Autowired
-    public void setSomeRepository(SomeRepository someRepository) { // Setter Injection
-        this.someRepository = someRepository;
-    }
+  @Autowired
+  public void setSomeRepository(SomeRepository someRepository) { // Setter Injection
+    this.someRepository = someRepository;
+  }
 
-    public void save(String foo) {
-        someRepository.insert(foo);
-    }
+  public void save(String foo) {
+    someRepository.insert(foo);
+  }
 }
