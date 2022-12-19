@@ -10,21 +10,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 @Slf4j
 public class AopTests {
 
-    @Autowired
-    private SomeService someService;
+  @Autowired private SomeService someService;
 
-    @Test
-    public void beforeAndAfter() {
-        someService.saveSomeObject();
-    }
+  @Test
+  public void beforeAndAfter() {
+    someService.saveSomeObject();
+  }
 
-    @Test
-    public void afterReturning() {
-        someService.getSomeMessage();
-    }
+  @Test
+  public void afterReturning() {
+    someService.getSomeMessage();
+  }
 
-    @Test
-    public void aspectsWithAnnotation() {
-        someService.doSomething();
-    }
+  @Test
+  public void aspectsWithAnnotation() {
+    someService.doSomething();
+  }
 }

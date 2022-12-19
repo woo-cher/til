@@ -4,5 +4,5 @@ import com.study.til.factory.Customer;
 import com.study.til.factory.Medicine;
 
 public interface AbstractMedicineFactory {
-    Medicine getMedicine(Customer customer);
+  Medicine getMedicine(Customer customer);
 }

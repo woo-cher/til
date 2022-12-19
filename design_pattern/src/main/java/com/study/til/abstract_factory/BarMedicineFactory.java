@@ -6,16 +6,13 @@ import com.study.til.abstract_factory.bar_medicine.BarHeadachePill;
 import com.study.til.factory.Customer;
 import com.study.til.factory.Medicine;
 
-public class BarMedicineFactory implements AbstractMedicineFactory{
+public class BarMedicineFactory implements AbstractMedicineFactory {
 
-    public Medicine getMedicine(Customer customer) {
-        switch (customer) {
-            case COLD:
-                return new BarCold();
-            case DIGESTIVE:
-                return new BarDigestive();
-            default:
-                return new BarHeadachePill();
-        }
-    }
+  public Medicine getMedicine(Customer customer) {
+    return switch (customer) {
+      case COLD -> new BarCold();
+      case DIGESTIVE -> new BarDigestive();
+      default -> new BarHeadachePill();
+    };
+  }
 }

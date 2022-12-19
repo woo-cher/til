@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class RabbitmqPublisher {
-    private final RabbitMessagingTemplate template;
+  private final RabbitMessagingTemplate template;
 
-    public void publish(String message) {
-        template.convertAndSend("toy.exchange", "routeKey", message);
-    }
+  public void publish(String message) {
+    template.convertAndSend("toy.exchange", "routeKey", message);
+  }
 }

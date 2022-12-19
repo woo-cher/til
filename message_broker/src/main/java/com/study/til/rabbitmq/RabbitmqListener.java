@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class RabbitmqListener {
 
-    @RabbitListener(queues = "toy.queue")
-    public void receiveMessage(final Message message) {
-        log.info("amqp message : {}", message.toString());
-    }
+  @RabbitListener(queues = "toy.queue")
+  public void receiveMessage(final Message message) {
+    log.info("amqp message : {}", message.toString());
+  }
 }

@@ -4,8 +4,8 @@ import com.study.til.factory.Medicine;
 
 public class FooDigestive implements Medicine {
 
-    @Override
-    public void get() {
-        System.out.println("Foo 사 소화제 드릴게요~");
-    }
+  @Override
+  public void get() {
+    System.out.println("Foo 사 소화제 드릴게요~");
+  }
 }
