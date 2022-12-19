@@ -25,25 +25,27 @@ allprojects {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'java-library'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'io.spring.dependency-management'
-
     sourceCompatibility = 17
 
     repositories {
         mavenCentral()
     }
 
-    dependencies {
-        implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
-        implementation 'org.projectlombok:lombok'
+    if (it.name != "design_pattern") {
+        apply plugin: 'org.springframework.boot'
+        apply plugin: 'io.spring.dependency-management'
 
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
-        testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
-        testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+        dependencies {
+            implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+            implementation 'org.projectlombok:lombok'
 
-        annotationProcessor 'org.projectlombok:lombok'
-        testAnnotationProcessor 'org.projectlombok:lombok'
+            testImplementation 'org.springframework.boot:spring-boot-starter-test'
+            testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+            testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+
+            annotationProcessor 'org.projectlombok:lombok'
+            testAnnotationProcessor 'org.projectlombok:lombok'
+        }
     }
 
     test {
@@ -54,7 +56,9 @@ subprojects {
 project(':spring_application') {
     dependencies {
         implementation project(':message_broker')
+        implementation project(':controller')
     }
 }
 
+project(':controller') {}
 project(':message_broker') {}
