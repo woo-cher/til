@@ -57,8 +57,14 @@ project(':spring_application') {
     dependencies {
         implementation project(':message_broker')
         implementation project(':controller')
+        implementation project(':sse_notification')
     }
 }
 
-project(':controller') {}
+project(':controller') {
+    dependencies {
+        implementation project(':sse_notification')
+    }
+}
 project(':message_broker') {}
+project(':sse_notification') {}
