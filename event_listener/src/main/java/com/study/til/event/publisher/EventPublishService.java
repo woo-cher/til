@@ -1,7 +1,7 @@
-package com.study.til.spring.event.publisher;
+package com.study.til.event.publisher;
 
-import com.study.til.spring.event.dto.BarDTO;
-import com.study.til.spring.event.dto.FooDTO;
+import com.study.til.event.dto.BarDTO;
+import com.study.til.event.dto.FooDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;

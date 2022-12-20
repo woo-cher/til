@@ -1,4 +1,4 @@
-package com.study.til.spring.event.dto;
+package com.study.til.event.dto;
 
 public class FooDTO {
   private final String name;

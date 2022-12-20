@@ -25,11 +25,7 @@ public class SseContainer {
           log.info("onTimeout callback");
           emitter.complete();
         });
-    emitter.onError(
-        (e) -> {
-          log.info("onError callback {}", e);
-        }
-    );
+    emitter.onError(e -> log.info("onError callback, {}", e));
 
     return emitter;
   }
@@ -39,7 +35,7 @@ public class SseContainer {
       try {
         emitter.send(SseEmitter.event()
             .name("ad")
-            .data("광고!!"));
+            .data("광고 이벤트"));
       } catch (IOException e) {
         emitters.remove(emitter);
       }

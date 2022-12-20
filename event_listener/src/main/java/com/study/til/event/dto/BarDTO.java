@@ -1,4 +1,4 @@
-package com.study.til.spring.event.dto;
+package com.study.til.event.dto;
 
 public class BarDTO {
   private String name;

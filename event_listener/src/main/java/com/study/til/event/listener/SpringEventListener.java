@@ -1,7 +1,7 @@
-package com.study.til.spring.event.listener;
+package com.study.til.event.listener;
 
-import com.study.til.spring.event.dto.BarDTO;
-import com.study.til.spring.event.dto.FooDTO;
+import com.study.til.event.dto.BarDTO;
+import com.study.til.event.dto.FooDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 public class SpringEventListener {
 
   @EventListener
-  public void process(final FooDTO targetDTO) {
-    log.info("who is ? {}", targetDTO.name());
+  public void process(final FooDTO fooDTO) {
+    log.info("who is ? {}", fooDTO.name());
   }
 
   @EventListener

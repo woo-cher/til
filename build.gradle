@@ -28,6 +28,7 @@ subprojects {
     sourceCompatibility = 17
 
     repositories {
+        mavenLocal()
         mavenCentral()
     }
 
@@ -38,6 +39,7 @@ subprojects {
         dependencies {
             implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
             implementation 'org.projectlombok:lombok'
+            implementation 'org.springframework:spring-context'
 
             testImplementation 'org.springframework.boot:spring-boot-starter-test'
             testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
@@ -57,6 +59,7 @@ project(':spring_application') {
     dependencies {
         implementation project(':message_broker')
         implementation project(':controller')
+        implementation project(':event_listener')
         implementation project(':sse_notification')
     }
 }
@@ -68,3 +71,4 @@ project(':controller') {
 }
 project(':message_broker') {}
 project(':sse_notification') {}
+project(':event_listener') {}
