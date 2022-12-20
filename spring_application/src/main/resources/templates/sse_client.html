@@ -10,23 +10,11 @@
 
 <body>
     <h1>SSE</h1>
-    <button type="button" onclick="adEvent()">관리자가 광고 알림 이벤트 발생</button>
 </body>
 
 </html>
 
 <script>
-    function adEvent() {
-        $.ajax({
-            url      : "localhost:8080/sse/ad",
-            type     : "GET",
-            contentType : "application/json",
-            error : function(error){
-                console.log("실패 : " + error)
-            }
-        });
-    }
-
     $(function () {
         const sse = new EventSource("http://localhost:8080/sse");
         console.log(sse);
@@ -38,36 +26,7 @@
 
         sse.addEventListener('ad', e => {
             const { data: res } = e;
-            console.log("ad event data",res);
-
-            (async () => {
-                const showNotification = () => {
-                    const notification = new Notification('코드 봐줘', {
-                        body: res.content
-                    });
-
-                    setTimeout(() => {
-                        notification.close();
-                    }, 10 * 1000);
-
-                    notification.addEventListener('click', () => {
-                        window.open(notification.url, '_blank');
-                    });
-                }
-
-                let granted = false;
-
-                if (Notification.permission === 'granted') {
-                    granted = true;
-                } else if (Notification.permission !== 'denied') {
-                    let permission = await Notification.requestPermission();
-                    granted = permission === 'granted';
-                }
-
-                if (granted) {
-                    showNotification();
-                }
-            }) ();
+            console.log("ad event data : ",res);
         });
     })
 </script>
