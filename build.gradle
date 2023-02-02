@@ -72,3 +72,4 @@ project(':controller') {
 project(':message_broker') {}
 project(':sse_notification') {}
 project(':event_listener') {}
+project(':spring_webflux') {}
