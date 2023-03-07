@@ -14,6 +14,6 @@ public class HelloRoute {
 
   @Bean
   public RouterFunction<ServerResponse> hello(HelloHandler handler) {
-    return route(GET("/hello"), handler::hello);
+    return route(GET("/hello"), handler::hello).andRoute(GET("/foo"), handler::doOnNext);
   }
 }
