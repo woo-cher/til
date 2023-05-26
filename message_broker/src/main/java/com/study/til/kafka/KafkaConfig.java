@@ -19,10 +19,10 @@ public class KafkaConfig {
   @Value("${spring.kafka.bootstrap-servers}")
   private String bootstrapServers;
 
-  @Bean
-  public NewTopic topic() {
-    return TopicBuilder.name("toytopic").build();
-  }
+//  @Bean
+//  public NewTopic topic() {
+//    return TopicBuilder.name("toytopic").build();
+//  }
 
   @Bean
   public ProducerFactory<String, String> producerFactory() {
@@ -40,8 +40,7 @@ public class KafkaConfig {
   }
 
   @Bean
-  public KafkaTemplate<String, String> kafkaTemplate(
-      ProducerFactory<String, String> producerFactory) {
+  public KafkaTemplate<String, String> kafkaTemplate(ProducerFactory<String, String> producerFactory) {
     return new KafkaTemplate<>(producerFactory);
   }
 }
