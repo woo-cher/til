@@ -25,6 +25,7 @@ allprojects {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'java-library'
+
     sourceCompatibility = 17
 
     repositories {
@@ -50,6 +51,10 @@ subprojects {
         }
     }
 
+    if (it.name == "nexus_libaray") {
+        apply plugin: 'maven-publish'
+    }
+
     test {
         useJUnitPlatform()
     }
@@ -60,6 +65,7 @@ project(':spring_application') {
         implementation project(':controller')
         implementation project(':event_listener')
         implementation project(':sse_notification')
+        implementation project(':message_broker')
     }
 }
 
@@ -69,7 +75,12 @@ project(':controller') {
     }
 }
 
-project(':message_broker') {}
+project(':message_broker') {
+    dependencies {
+        implementation project(':nexus_libaray')
+    }
+}
 project(':sse_notification') {}
 project(':event_listener') {}
 project(':spring_webflux') {}
+project(':nexus_libaray') {}

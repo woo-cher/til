@@ -7,4 +7,4 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
-apply from: 'kafka-test.gradle'
+evaluationDependsOn(':spring_application')

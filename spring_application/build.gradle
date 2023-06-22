@@ -13,4 +13,4 @@ test {
     exclude '**/*'
 }
 
-evaluationDependsOn(':message_broker')
+apply from: 'kafka-test.gradle'

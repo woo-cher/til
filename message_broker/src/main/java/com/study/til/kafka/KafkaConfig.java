@@ -16,13 +16,13 @@ import org.springframework.kafka.core.ProducerFactory;
 @Configuration
 public class KafkaConfig {
 
-  @Value("${spring.kafka.bootstrap-servers}")
+  @Value("${kafka.bootstrap-servers}")
   private String bootstrapServers;
 
-//  @Bean
-//  public NewTopic topic() {
-//    return TopicBuilder.name("toytopic").build();
-//  }
+  @Bean
+  public NewTopic topic() {
+    return TopicBuilder.name("toytopic").build();
+  }
 
   @Bean
   public ProducerFactory<String, String> producerFactory() {
