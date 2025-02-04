@@ -16,7 +16,7 @@ import org.springframework.kafka.core.ProducerFactory;
 @Configuration
 public class KafkaConfig {
 
-  @Value("${spring.kafka.bootstrap-servers}")
+  @Value("${kafka.bootstrap-servers}")
   private String bootstrapServers;
 
   @Bean
@@ -40,8 +40,7 @@ public class KafkaConfig {
   }
 
   @Bean
-  public KafkaTemplate<String, String> kafkaTemplate(
-      ProducerFactory<String, String> producerFactory) {
+  public KafkaTemplate<String, String> kafkaTemplate(ProducerFactory<String, String> producerFactory) {
     return new KafkaTemplate<>(producerFactory);
   }
 }

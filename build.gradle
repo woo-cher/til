@@ -1,11 +1,7 @@
 buildscript {
     ext {
-        set('springBootVersion', '2.5.5')
-        set('springCloudVersion', "2020.0.4") // (with springboot 2.4.x, 2.5.x)
-        set('jwtVersion', '3.18.1')
-        set('openFeignVersion', '11.6')
-        set('log4jVersion', '2.17.1')
-        set('gradleDependencyVersion', '1.0.11.RELEASE')
+        set('springBootVersion', '3.4.2')
+        set('gradleDependencyVersion', '1.1.7')
     }
 
     repositories {
@@ -25,7 +21,8 @@ allprojects {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'java-library'
-    sourceCompatibility = 17
+
+    sourceCompatibility = 23
 
     repositories {
         mavenLocal()
@@ -42,12 +39,15 @@ subprojects {
             implementation 'org.springframework:spring-context'
 
             testImplementation 'org.springframework.boot:spring-boot-starter-test'
-            testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
-            testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+            testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
 
             annotationProcessor 'org.projectlombok:lombok'
             testAnnotationProcessor 'org.projectlombok:lombok'
         }
+    }
+
+    if (it.name == "nexus_libaray") {
+        apply plugin: 'maven-publish'
     }
 
     test {
@@ -57,19 +57,21 @@ subprojects {
 
 project(':spring_application') {
     dependencies {
-        implementation project(':message_broker')
         implementation project(':controller')
         implementation project(':event_listener')
-        implementation project(':sse_notification')
+        implementation project(':message_broker')
     }
 }
 
 project(':controller') {
+    dependencies {}
+}
+
+project(':message_broker') {
     dependencies {
-        implementation project(':sse_notification')
+        implementation project(':nexus_libaray')
     }
 }
-project(':message_broker') {}
-project(':sse_notification') {}
 project(':event_listener') {}
 project(':spring_webflux') {}
+project(':nexus_libaray') {}

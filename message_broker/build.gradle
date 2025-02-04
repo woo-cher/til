@@ -4,14 +4,7 @@ jar { enabled = true }
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-amqp'
     implementation 'org.springframework.kafka:spring-kafka'
-
     implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
-/**
- *  Todo)
- *
- *  1. kafka, rabbitmq 를 docker 로 설치할 것
- *  2. kafka, rabbitmq 두 모듈을 분리한다
- *  3. 동작을 확인 한다 (project 의존성 추가 할 수 있는지 여부)
- */
+evaluationDependsOn(':spring_application')

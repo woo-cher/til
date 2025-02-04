@@ -200,3 +200,5 @@ application-test.yml
 
 # custom
 application-local.yml
+kafka_test/
+kafka-test.gradle
