@@ -29,7 +29,7 @@ subprojects {
         mavenCentral()
     }
 
-    if (it.name != "design_pattern") {
+    if (it.name != "design-pattern") {
         apply plugin: 'org.springframework.boot'
         apply plugin: 'io.spring.dependency-management'
 
@@ -46,7 +46,7 @@ subprojects {
         }
     }
 
-    if (it.name == "nexus_libaray") {
+    if (it.name == "nexus-libaray") {
         apply plugin: 'maven-publish'
     }
 
@@ -55,11 +55,11 @@ subprojects {
     }
 }
 
-project(':spring_application') {
+project(':spring-application') {
     dependencies {
         implementation project(':controller')
-        implementation project(':event_listener')
-        implementation project(':message_broker')
+        implementation project(':event-listener')
+        implementation project(':message-broker')
     }
 }
 
@@ -67,11 +67,11 @@ project(':controller') {
     dependencies {}
 }
 
-project(':message_broker') {
+project(':message-broker') {
     dependencies {
-        implementation project(':nexus_libaray')
+        implementation project(':nexus-libaray')
     }
 }
-project(':event_listener') {}
-project(':spring_webflux') {}
-project(':nexus_libaray') {}
+project(':event-listener') {}
+project(':spring-webflux') {}
+project(':nexus-libaray') {}
